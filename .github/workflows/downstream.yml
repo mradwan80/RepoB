@@ -8,20 +8,5 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      #- name: Checkout Code
-      #  uses: actions/checkout@v3
-
-      #- name: Install CMake
-      #  run: sudo apt-get update && sudo apt-get install -y cmake
-
-      #- name: Configure CMake
-      #  run: cmake -B build
-
-      #- name: Build project
-      #  run: cmake --build build
-        
-      - name: trigger
-        uses: mradwan80/RepoC/.github/workflows/ci.yml@main
+  trigger:
+    uses: mradwan80/RepoC/.github/workflows/ci.yml@main
