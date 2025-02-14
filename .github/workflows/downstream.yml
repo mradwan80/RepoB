@@ -23,5 +23,5 @@ jobs:
       #- name: Build project
       #  run: cmake --build build
         
-       - name: trigger
-       uses: mradwan80/RepoC/.github/workflows/ci.yml
+      - name: trigger
+        uses: mradwan80/RepoC/.github/workflows/ci.yml
