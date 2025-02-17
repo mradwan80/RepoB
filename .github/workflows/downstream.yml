@@ -10,6 +10,7 @@ on:
 
 jobs:
   trigger-RepoC:
+    runs-on: ubuntu-latest
     steps:
         - name: trigger dispatch
           run:  |
@@ -18,6 +19,7 @@ jobs:
                https://api.github.com/repos/mradwan80/RepoC/actions/workflows/manual-trigger.yml/dispatches \
                -d '{"ref": "main", "inputs": {}}'
   trigger-RepoD:
+    runs-on: ubuntu-latest
     steps:
         - name: trigger dispatch
           run:  |
