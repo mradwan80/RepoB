@@ -10,6 +10,18 @@ on:
 
 jobs:
   trigger-RepoC:
-    uses: mradwan80/RepoC/.github/workflows/ci.yml@main
+    steps:
+        - name: trigger dispatch
+          run:  |
+            curl -X POST -H "Accept: application/vnd.github.v3+json" \
+               -H "Authorization: token ${{ secrets.REPOC_PAT }}" \
+               https://api.github.com/repos/mradwan80/RepoC/actions/workflows/manual-trigger.yml/dispatches \
+               -d '{"ref": "main", "inputs": {}}'
   trigger-RepoD:
-    uses: mradwan80/RepoD/.github/workflows/ci.yml@main
+    steps:
+        - name: trigger dispatch
+          run:  |
+            curl -X POST -H "Accept: application/vnd.github.v3+json" \
+               -H "Authorization: token ${{ secrets.REPOD_PAT }}" \
+               https://api.github.com/repos/mradwan80/REPOD/actions/workflows/manual-trigger.yml/dispatches \
+               -d '{"ref": "main", "inputs": {}}'
