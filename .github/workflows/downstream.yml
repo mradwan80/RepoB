@@ -17,7 +17,7 @@ jobs:
             curl -X POST -H "Accept: application/vnd.github.v3+json" \
                -H "Authorization: token ${{ secrets.GLOBAL_PAT }}" \
                https://api.github.com/repos/mradwan80/RepoC/actions/workflows/ci.yml/dispatches \
-               -d '{"ref": "main", "inputs": {"name": "Moe", "environment": "staging"}}'
+               -d '{"ref": "main", "inputs": {"}}'
   trigger-RepoD:
     runs-on: ubuntu-latest
     steps:
@@ -26,4 +26,4 @@ jobs:
             curl -X POST -H "Accept: application/vnd.github.v3+json" \
                -H "Authorization: token ${{ secrets.GLOBAL_PAT }}" \
                https://api.github.com/repos/mradwan80/RepoD/actions/workflows/ci.yml/dispatches \
-               -d '{"ref": "main", "inputs": {"name": "Moe", "environment": "staging"}}'
+               -d '{"ref": "main", "inputs": {}}'
