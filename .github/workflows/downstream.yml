@@ -9,7 +9,7 @@ on:
   workflow_call: # Allows this workflow to be called by another workflow
 
 jobs:
-  start:
+   start:
     steps:
    trigger-RepoC:
     needs: start
