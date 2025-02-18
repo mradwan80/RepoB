@@ -10,8 +10,9 @@ on:
 
 jobs:
    start:
-     - name: dummy
-       run: ls
+     steps:
+       - name: dummy
+         run: ls
           
    trigger-RepoC:
     needs: start
