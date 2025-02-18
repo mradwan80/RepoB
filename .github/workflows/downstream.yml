@@ -11,6 +11,8 @@ on:
 jobs:
   start:
     steps:
+      - name: dummy
+        run: ls
     
   trigger-RepoC:
     needs: start
