@@ -9,11 +9,11 @@ on:
   workflow_call: # Allows this workflow to be called by another workflow
 
 jobs:
-  trigger-RepoC:
+  start:
     steps:
-      - name: trigger RepoC
-        uses: mradwan80/RepoC/.github/workflows/ci.yml@main
+   trigger-RepoC:
+    needs: start
+    uses: mradwan80/RepoC/.github/workflows/ci.yml@main
   trigger-RepoD:
-    steps:
-      - name: trigger RepoD
-        uses: mradwan80/RepoD/.github/workflows/ci.yml@main
+    needs: start
+    uses: mradwan80/RepoD/.github/workflows/ci.yml@main
