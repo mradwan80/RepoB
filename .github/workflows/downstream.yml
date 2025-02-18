@@ -10,7 +10,8 @@ on:
 
 jobs:
   start:
-  
+    steps:
+    
   trigger-RepoC:
     needs: start
     uses: mradwan80/RepoC/.github/workflows/ci.yml@main
