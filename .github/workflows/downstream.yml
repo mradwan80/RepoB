@@ -10,6 +10,8 @@ on:
 
 jobs:
   trigger-RepoC:
+    needs: trigger-dependencies
     uses: mradwan80/RepoC/.github/workflows/ci.yml@main
   trigger-RepoD:
+    needs: trigger-dependencies
     uses: mradwan80/RepoD/.github/workflows/ci.yml@main
