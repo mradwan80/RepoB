@@ -9,9 +9,10 @@ on:
   workflow_call: # Allows this workflow to be called by another workflow
 
 jobs:
+  start:
   trigger-RepoC:
-    needs: trigger-dependencies
+    needs: start
     uses: mradwan80/RepoC/.github/workflows/ci.yml@main
   trigger-RepoD:
-    needs: trigger-dependencies
+    needs: start
     uses: mradwan80/RepoD/.github/workflows/ci.yml@main
