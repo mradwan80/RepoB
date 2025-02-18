@@ -10,6 +10,7 @@ on:
 
 jobs:
    start:
+     runs-on: ubuntu-latest
      steps:
        - name: dummy
          run: ls
